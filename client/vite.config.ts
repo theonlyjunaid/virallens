@@ -4,10 +4,17 @@ import { resolve } from 'path'
 
 export default defineConfig({
     plugins: [react()],
+    base: '/',
+    publicDir: 'public',
     resolve: {
         alias: {
-            '@': resolve(__dirname, './src'),
+            '@': resolve('./src'),
         },
+    },
+    build: {
+        outDir: 'dist',
+        assetsDir: 'assets',
+        copyPublicDir: true,
     },
     server: {
         port: 5173,
@@ -15,7 +22,6 @@ export default defineConfig({
             '/api': {
                 target: 'http://localhost:5000',
                 changeOrigin: true,
-                secure: false,
             },
         },
     },
