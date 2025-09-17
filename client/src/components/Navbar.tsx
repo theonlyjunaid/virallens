@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
                             <div className="bg-primary-600 text-white p-2 rounded-lg">
                                 <FaBuilding className="w-6 h-6" />
                             </div>
-                            <span className="ml-2 text-xl font-bold text-gray-900">Virralen</span>
+                            <span className="ml-2 text-xl font-bold text-gray-900">virallens</span>
                         </div>
                     </div>
 

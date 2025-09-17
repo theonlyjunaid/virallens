@@ -33,8 +33,7 @@ const ChatLayout = () => {
                                 <FaBars className="w-5 h-5" />
                             </button>
                             <div className="flex items-center space-x-3">
-                                <img src="/logo.png" alt="Virralen" className="w-8 h-8 object-contain" />
-                                <h1 className="text-xl font-semibold text-gray-800 hidden sm:block">Virralen</h1>
+                                <img src="/logo.png" alt="virallens" className="h-10" />
                             </div>
                         </div>
 
