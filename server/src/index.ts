@@ -10,12 +10,12 @@ import { generalLimiter } from './middleware/rateLimiter';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 connectDB();
 
 app.use(cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: process.env.CLIENT_URL,
     credentials: true
 }));
 
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ message: 'Server is running!', timestamp: new Date().toISOString() });
 });
 
